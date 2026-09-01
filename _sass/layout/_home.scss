@@ -34,6 +34,7 @@ html[data-language="zh"] .language-text--zh {
 }
 
 .home-page .masthead__inner-wrap {
+  position: relative;
   max-width: 1080px;
   padding: 1.25rem 1.5rem;
 }
@@ -75,8 +76,16 @@ html[data-language="zh"] .language-text--zh {
   display: none;
 }
 
-.home-page .greedy-nav .visible-links #language-toggle a {
-  margin: 0 0.85rem;
+.home-page .language-toggle-wrap {
+  position: absolute;
+  top: 50%;
+  right: 1.5rem;
+  transform: translateY(-50%);
+}
+
+.home-page .language-toggle {
+  display: block;
+  margin: 0;
   padding: 0.25rem 0;
   color: var(--global-text-color);
   font-family: inherit;
@@ -85,8 +94,13 @@ html[data-language="zh"] .language-text--zh {
   cursor: pointer;
 }
 
-.home-page .greedy-nav .visible-links #language-toggle a:hover {
+.home-page .language-toggle:hover {
   color: var(--global-link-color-hover);
+}
+
+.home-page .language-toggle:focus {
+  outline: 0;
+  border-bottom: 1px solid var(--global-text-color);
 }
 
 .home-shell {
@@ -298,6 +312,10 @@ html[data-language="zh"] .language-text--zh {
 
   .home-page .masthead__inner-wrap {
     padding: 0.85rem 1.25rem;
+  }
+
+  .home-page .language-toggle-wrap {
+    right: 1.25rem;
   }
 
   .home-page .greedy-nav {

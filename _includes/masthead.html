@@ -5,36 +5,34 @@
       <nav id="site-nav" class="greedy-nav">
         <button><span class="navicon"></span></button>
         <ul class="visible-links">
-          <li class="masthead__menu-item masthead__menu-item--lg persist {% if page.url == '/' or page.url == '/index.html' %}selected{% endif %}">
-            <a href="{{ base_path }}/">
-              <span class="language-text language-text--en">{{ site.title }}</span>
-              <span class="language-text language-text--zh" lang="zh-CN">邓雅馨</span>
-            </a>
-          </li>
+          {% assign is_home_page = false %}
+          {% if page.url == '/' or page.url == '/index.html' %}
+            {% assign is_home_page = true %}
+          {% endif %}
           {% for link in site.data.navigation.main %}
             {% if link.url contains 'http' %}
               {% assign domain = '' %}
             {% else %}
               {% assign domain = base_path %}
             {% endif %}
-            <li class="masthead__menu-item {% if page.url contains link.url and link.url != '/' %}selected{% endif %}">
+            <li class="masthead__menu-item {% if is_home_page and link.url == '/#about' %}selected{% elsif page.url contains link.url and link.url != '/' %}selected{% endif %}">
               <a href="{{ domain }}{{ link.url }}">
                 <span class="language-text language-text--en">{{ link.title }}</span>
                 <span class="language-text language-text--zh" lang="zh-CN">{{ link.title_zh | default: link.title }}</span>
               </a>
             </li>
           {% endfor %}
-          <li id="language-toggle" class="masthead__menu-item persist tail">
-            <a href="#" role="button" class="language-toggle" aria-label="切换为中文" aria-pressed="false">
-              <span class="language-toggle__label">中文</span>
-            </a>
-          </li>
           <li id="theme-toggle" class="masthead__menu-item persist tail">
             <a role="button" aria-labelledby="theme-icon"><i id="theme-icon" class="fa-solid fa-sun" aria-hidden="true" title="toggle theme"></i></a>
           </li>
         </ul>
         <ul class="hidden-links hidden"></ul>
       </nav>
+    </div>
+    <div id="language-toggle" class="language-toggle-wrap">
+      <a href="#" role="button" class="language-toggle" aria-label="切换为中文" aria-pressed="false">
+        <span class="language-toggle__label">中文</span>
+      </a>
     </div>
   </div>
 </div>
