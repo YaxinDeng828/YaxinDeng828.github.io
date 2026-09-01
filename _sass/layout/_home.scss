@@ -75,13 +75,9 @@ html[data-language="zh"] .language-text--zh {
   display: none;
 }
 
-.home-page .greedy-nav .visible-links #language-toggle button {
-  position: static;
-  height: auto;
+.home-page .greedy-nav .visible-links #language-toggle a {
   margin: 0 0.85rem;
   padding: 0.25rem 0;
-  border: 0;
-  background: transparent;
   color: var(--global-text-color);
   font-family: inherit;
   font-size: 0.95rem;
@@ -89,7 +85,7 @@ html[data-language="zh"] .language-text--zh {
   cursor: pointer;
 }
 
-.home-page .greedy-nav .visible-links #language-toggle button:hover {
+.home-page .greedy-nav .visible-links #language-toggle a:hover {
   color: var(--global-link-color-hover);
 }
 

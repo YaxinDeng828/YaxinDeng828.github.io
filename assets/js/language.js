@@ -19,7 +19,7 @@
       image.setAttribute("alt", language === "zh" ? image.dataset.altZh : image.dataset.altEn);
     });
 
-    var toggle = document.querySelector("#language-toggle button");
+    var toggle = document.querySelector("#language-toggle .language-toggle");
     if (toggle) {
       toggle.setAttribute("aria-label", language === "zh" ? "Switch to English" : "切换为中文");
       toggle.setAttribute("aria-pressed", language === "zh" ? "true" : "false");
@@ -30,9 +30,10 @@
   document.addEventListener("DOMContentLoaded", function () {
     updateLanguage(language);
 
-    var toggle = document.querySelector("#language-toggle button");
+    var toggle = document.querySelector("#language-toggle .language-toggle");
     if (toggle) {
-      toggle.addEventListener("click", function () {
+      toggle.addEventListener("click", function (event) {
+        event.preventDefault();
         updateLanguage(language === "zh" ? "en" : "zh");
       });
     }
