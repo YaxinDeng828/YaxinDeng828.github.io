@@ -11,6 +11,18 @@
   line-height: 1.85;
 }
 
+.language-text--zh {
+  display: none;
+}
+
+html[data-language="zh"] .language-text--en {
+  display: none;
+}
+
+html[data-language="zh"] .language-text--zh {
+  display: inline;
+}
+
 .home-page .masthead {
   position: relative;
   background: #fff;
@@ -61,6 +73,24 @@
 
 .home-page .greedy-nav #theme-toggle {
   display: none;
+}
+
+.home-page .greedy-nav .visible-links #language-toggle button {
+  position: static;
+  height: auto;
+  margin: 0 0.85rem;
+  padding: 0.25rem 0;
+  border: 0;
+  background: transparent;
+  color: var(--global-text-color);
+  font-family: inherit;
+  font-size: 0.95rem;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.home-page .greedy-nav .visible-links #language-toggle button:hover {
+  color: var(--global-link-color-hover);
 }
 
 .home-shell {
@@ -242,7 +272,7 @@
   font-weight: 700;
 }
 
-.award-list span {
+.award-list .award-name {
   color: var(--global-text-color-light);
   font-size: 0.95rem;
 }
