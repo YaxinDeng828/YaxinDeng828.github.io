@@ -277,8 +277,10 @@ html[data-language="zh"] .interest-description.language-text--zh {
 }
 
 .paper-entry {
+  position: relative;
   padding: 0 0 1.3rem;
   border-bottom: 1px solid #e5e5e5;
+  cursor: default;
 }
 
 .paper-entry h3 {
@@ -300,6 +302,38 @@ html[data-language="zh"] .interest-description.language-text--zh {
 
 .paper-meta {
   margin-top: 0.15rem;
+}
+
+.paper-entry:focus {
+  outline: 0;
+}
+
+.paper-entry:focus h3 {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+}
+
+.paper-summary {
+  max-width: 780px;
+  max-height: 0;
+  margin-top: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.25s ease, margin-top 0.25s ease, opacity 0.2s ease;
+}
+
+.paper-entry:hover .paper-summary,
+.paper-entry:focus-within .paper-summary {
+  max-height: 60rem;
+  margin-top: 1rem;
+  opacity: 1;
+}
+
+.paper-summary p {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.65;
 }
 
 .education-entry {

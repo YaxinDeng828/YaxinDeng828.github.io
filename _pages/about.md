@@ -72,7 +72,7 @@ author_profile: false
           <span class="language-text language-text--en">Paper</span>
           <span class="language-text language-text--zh" lang="zh-CN">论文</span>
         </h2>
-        <article class="paper-entry">
+        <article class="paper-entry" tabindex="0" aria-describedby="memdtg-summary">
           <h3>
             <span class="language-text language-text--en">MemDTG: Dynamic Temporal Memory Graphs for Evidence-Admissible Agent Memory</span>
             <span class="language-text language-text--zh" lang="zh-CN">MemDTG：面向证据可采纳智能体记忆的动态时序记忆图</span>
@@ -85,6 +85,9 @@ author_profile: false
             <span class="language-text language-text--en">The 35th ACM International Conference on Information and Knowledge Management (CIKM '26) · CCF-B</span>
             <span class="language-text language-text--zh" lang="zh-CN">第 35 届 ACM 国际知识管理与信息管理会议（CIKM '26）· CCF-B</span>
           </p>
+          <div id="memdtg-summary" class="paper-summary">
+            <p>Long-term agent memory is an online, non-monotonic retrieval problem: new interactions can reinforce, contradict, supersede, or expire earlier memories. MemDTG treats memory as temporal evidence admission, combining immutable episodes, a mutable entity-state graph, and a memory-evolution graph over assertion versions. It compiles query constraints before ranking and uses QV-CTW to retrieve only evidence paths inside the legal temporal subgraph, while evidence certificates record selected facts, sources, roles, and rejected alternatives. On LongMemEval and LoCoMo, MemDTG achieves the best LLM-judge accuracy and Citation F1, reducing stale-answer errors by 61.7% and future leaks by 80.1%.</p>
+          </div>
         </article>
       </section>
 
