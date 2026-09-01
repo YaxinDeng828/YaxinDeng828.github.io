@@ -46,9 +46,24 @@ author_profile: false
           <span class="language-text language-text--zh" lang="zh-CN">研究方向</span>
         </h2>
         <ul class="interest-list">
-          <li><span class="language-text language-text--en">Agent Memory</span><span class="language-text language-text--zh" lang="zh-CN">智能体记忆</span></li>
-          <li><span class="language-text language-text--en">GraphRAG</span><span class="language-text language-text--zh" lang="zh-CN">GraphRAG</span></li>
-          <li><span class="language-text language-text--en">Database Systems</span><span class="language-text language-text--zh" lang="zh-CN">数据库系统</span></li>
+          <li>
+            <span class="interest-title language-text language-text--en">Agent Memory</span>
+            <span class="interest-description language-text language-text--en">Evidence-admissible, temporal, and provenance-aware memory mechanisms for reliable agents.</span>
+            <span class="interest-title language-text language-text--zh" lang="zh-CN">智能体记忆</span>
+            <span class="interest-description language-text language-text--zh" lang="zh-CN">面向可靠智能体的证据可采纳、时序化和可追溯长期记忆机制。</span>
+          </li>
+          <li>
+            <span class="interest-title language-text language-text--en">GraphRAG</span>
+            <span class="interest-description language-text language-text--en">Graph-structured retrieval and reasoning over evolving entities, relations, and evidence paths.</span>
+            <span class="interest-title language-text language-text--zh" lang="zh-CN">GraphRAG</span>
+            <span class="interest-description language-text language-text--zh" lang="zh-CN">围绕演化中的实体、关系和证据路径开展图结构检索与推理。</span>
+          </li>
+          <li>
+            <span class="interest-title language-text language-text--en">Database Systems</span>
+            <span class="interest-description language-text language-text--en">Efficient query processing, data reasoning, and systems for structured and temporal data.</span>
+            <span class="interest-title language-text language-text--zh" lang="zh-CN">数据库系统</span>
+            <span class="interest-description language-text language-text--zh" lang="zh-CN">面向结构化数据和时序数据的高效查询处理、数据推理与系统设计。</span>
+          </li>
         </ul>
       </section>
 
@@ -57,16 +72,51 @@ author_profile: false
           <span class="language-text language-text--en">Paper</span>
           <span class="language-text language-text--zh" lang="zh-CN">论文</span>
         </h2>
-        <article class="paper-entry">
-          <h4><a href="{{ site.baseurl }}/publication/2026-01-01-memdtg">
+        <article class="paper-entry" tabindex="0" aria-describedby="memdtg-abstract">
+          <h3>
             <span class="language-text language-text--en">MemDTG: Dynamic Temporal Memory Graphs for Evidence-Admissible Agent Memory</span>
             <span class="language-text language-text--zh" lang="zh-CN">MemDTG：面向证据可采纳智能体记忆的动态时序记忆图</span>
-          </a></h4>
-          <p>
-            <span class="language-text language-text--en">Deng Yaxin · First Author · CIKM 2026</span>
-            <span class="language-text language-text--zh" lang="zh-CN">邓雅馨 · 第一作者 · CIKM 2026</span>
+          </h3>
+          <p class="paper-authors">
+            <span class="language-text language-text--en">Yaxin Deng, Hongchao Qin, Tianyi Gao, Guang Zeng, and Rong-Hua Li</span>
+            <span class="language-text language-text--zh" lang="zh-CN">邓雅馨、秦洪超、高天翼、曾广、李荣华</span>
           </p>
+          <p class="paper-meta">
+            <span class="language-text language-text--en">CIKM 2026 · First Author</span>
+            <span class="language-text language-text--zh" lang="zh-CN">CIKM 2026 · 第一作者</span>
+          </p>
+          <div id="memdtg-abstract" class="paper-abstract">
+            <p class="paper-abstract__label">
+              <span class="language-text language-text--en">Abstract</span>
+              <span class="language-text language-text--zh" lang="zh-CN">摘要</span>
+            </p>
+            <p>Long-term agent memory is an online, non-monotonic retrieval problem. New interactions may reinforce, contradict, supersede, specialize, abstract, or expire earlier memories; the same fact can be a wrong current answer, a correct historical answer, or necessary transition evidence depending on query intent. Existing chunk, summary, and graph memories retrieve by semantic or graph relevance and treat time as post-hoc metadata, so they cannot determine whether a memory is observable, valid, lifecycle-admissible, and provenance-supported before it enters the candidate space.</p>
+            <p>We propose MemDTG, a dynamic temporal memory graph that frames agent memory as temporal evidence admission. MemDTG separates immutable raw episodes from a mutable entity-state temporal graph and a memory-evolution graph over assertion versions. State slots localize mutable user and task states; an LLM-assisted slot-local resolver classifies semantic evolution only within bounded temporal histories; and deterministic commit rules update valid intervals, lifecycle states, and typed evolution edges. At read time, a query compiler instantiates observed-time, valid-time, version, edge-type, and role constraints before ranking, and QV-CTW retrieves evidence paths only inside the query-legal temporal subgraph. Evidence certificates record selected facts, sources, roles, and rejected stale or future alternatives, making retrieval auditable. On LongMemEval and LoCoMo, MemDTG achieves the best LLM-judge accuracy and Citation F1. Ablation and temporal error analyses confirm that provenance certificates and legal-subgraph pre-filtering are each essential for these gains, reducing stale-answer errors by 61.7% and future leaks by 80.1%.</p>
+          </div>
         </article>
+      </section>
+
+      <section id="education" class="home-section" aria-labelledby="education-title">
+        <h2 id="education-title">
+          <span class="language-text language-text--en">Education</span>
+          <span class="language-text language-text--zh" lang="zh-CN">教育经历</span>
+        </h2>
+        <div class="education-entry">
+          <p class="education-period">
+            <span class="language-text language-text--en">September 2023 - July 2027</span>
+            <span class="language-text language-text--zh" lang="zh-CN">2023 年 9 月 - 2027 年 7 月</span>
+          </p>
+          <div>
+            <p class="education-school">
+              <span class="language-text language-text--en">Beijing Institute of Technology</span>
+              <span class="language-text language-text--zh" lang="zh-CN">北京理工大学</span>
+            </p>
+            <p class="education-degree">
+              <span class="language-text language-text--en">B.Eng. in Computer Science and Technology</span>
+              <span class="language-text language-text--zh" lang="zh-CN">计算机科学与技术专业，本科</span>
+            </p>
+          </div>
+        </div>
       </section>
 
       <section id="awards" class="home-section" aria-labelledby="awards-title">
