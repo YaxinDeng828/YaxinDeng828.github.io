@@ -6,86 +6,61 @@ author_profile: false
 ---
 
 <main class="home-shell">
-  <section id="profile" class="home-profile" aria-labelledby="profile-title">
-    <div class="home-profile__copy">
-      <p class="home-profile__eyebrow">Computer Science · Beijing, China</p>
-      <h1 id="profile-title">Deng Yaxin</h1>
-      <p class="home-profile__lead">Computer Science and Technology undergraduate at Beijing Institute of Technology, expected to graduate in 2027.</p>
-      <p class="home-profile__summary">I study how agent systems can work more reliably in uncertain, long-context, and low-feedback environments. My work focuses on long-term memory, retrieval-augmented generation, data reasoning, and database systems.</p>
-      <div class="home-profile__links" aria-label="Profile links">
-        <a href="mailto:yaxindeng0828@gmail.com">Email</a>
-        <a href="https://github.com/YaxinDeng828">GitHub</a>
-      </div>
-    </div>
-    <figure class="home-profile__portrait">
-      <img src="/images/deng-yaxin.jpg" alt="Portrait of Deng Yaxin">
-    </figure>
-  </section>
+  <div class="home-layout">
+    <aside class="home-sidebar" aria-labelledby="sidebar-name">
+      <figure class="home-sidebar__portrait">
+        <img src="/images/deng-yaxin.jpg" alt="邓雅馨的照片">
+      </figure>
+      <h1 id="sidebar-name">Deng Yaxin</h1>
+      <p>北京理工大学<br>计算机科学与技术</p>
+      <a href="mailto:yaxindeng0828@gmail.com">yaxindeng0828@gmail.com</a>
+    </aside>
 
-  <section id="papers" class="home-section" aria-labelledby="papers-title">
-    <header class="home-section__header">
-      <p class="home-section__index">01</p>
-      <div>
-        <h2 id="papers-title">Papers</h2>
-        <p>Published, submitted, and working papers.</p>
-      </div>
-    </header>
+    <div class="home-content">
+      <section id="about" class="home-section" aria-labelledby="about-title">
+        <h2 id="about-title">About Me</h2>
+        <div class="home-copy">
+          <p>I am a Computer Science and Technology undergraduate at Beijing Institute of Technology, expected to graduate in 2027.</p>
+          <p>My work explores how agent systems can behave more reliably in uncertain, long-context, and low-feedback environments. I am particularly interested in long-term memory, retrieval-augmented generation, data reasoning, and database systems.</p>
+        </div>
+      </section>
 
-    <article class="paper-entry">
-      <div class="paper-entry__meta">
-        <span>2026</span>
-        <span>CIKM 2026</span>
-      </div>
-      <div class="paper-entry__body">
-        <h3><a href="/publication/2026-01-01-memdtg">MemDTG: Dynamic Temporal Memory Graphs for Evidence-Admissible Agent Memory</a></h3>
-        <p class="paper-entry__authors"><strong>Deng Yaxin</strong> · First Author</p>
-        <p>Dynamic temporal memory graphs and evidence admission for time-aware, traceable, and auditable agent memory.</p>
-      </div>
-    </article>
-  </section>
+      <section id="research" class="home-section" aria-labelledby="research-title">
+        <h2 id="research-title">Research Interest</h2>
+        <ul class="interest-list">
+          <li>Agent Memory</li>
+          <li>Retrieval-Augmented Generation</li>
+          <li>Data Intelligence</li>
+          <li>Database Systems</li>
+        </ul>
+      </section>
 
-  <section id="awards" class="home-section" aria-labelledby="awards-title">
-    <header class="home-section__header">
-      <p class="home-section__index">02</p>
-      <div>
+      <section id="papers" class="home-section" aria-labelledby="papers-title">
+        <h2 id="papers-title">Paper</h2>
+        <div class="paper-groups">
+          <div class="paper-group">
+            <h3 class="paper-group__title">已投稿</h3>
+            <article class="paper-entry">
+              <h4><a href="/publication/2026-01-01-memdtg">MemDTG: Dynamic Temporal Memory Graphs for Evidence-Admissible Agent Memory</a></h4>
+              <p>Deng Yaxin · First Author · CIKM 2026</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="awards" class="home-section" aria-labelledby="awards-title">
         <h2 id="awards-title">Awards</h2>
-        <p>Selected competition honors and academic awards.</p>
-      </div>
-    </header>
-
-    <div class="award-list">
-      <article class="award-entry">
-        <h3>First Prize, Beijing Municipal Round</h3>
-        <p>2026 Challenge Cup</p>
-      </article>
-      <article class="award-entry">
-        <h3>Third Prize, Individual Finals</h3>
-        <p>2025 China Collegiate Computing Contest · Ladder Tournament</p>
-      </article>
-      <article class="award-entry">
-        <h3>First Place in Beijing</h3>
-        <p>5th OceanBase Database Competition</p>
-      </article>
-      <article class="award-entry">
-        <h3>Third Prize, C/C++ Division</h3>
-        <p>15th Blue Bridge Cup National Software and Information Technology Competition</p>
-      </article>
-      <article class="award-entry">
-        <h3>Silver Award, Undergraduate Track</h3>
-        <p>7th MaTi Cup Programming Competition</p>
-      </article>
-      <article class="award-entry">
-        <h3>Honorable Mention</h3>
-        <p>2024 Mathematical Contest in Modeling / Interdisciplinary Contest in Modeling</p>
-      </article>
-      <article class="award-entry">
-        <h3>Second Prize, Provincial Division</h3>
-        <p>2024 National Undergraduate Mathematical Contest in Modeling</p>
-      </article>
-      <article class="award-entry">
-        <h3>Multiple First-Class Scholarships</h3>
-        <p>Beijing Institute of Technology</p>
-      </article>
+        <ul class="award-list">
+          <li><strong>北京赛区一等奖</strong><span>2026 年“挑战杯”</span></li>
+          <li><strong>个人决赛三等奖</strong><span>2025 中国大学生计算机设计大赛 · 朗新杯</span></li>
+          <li><strong>北京赛区第一名</strong><span>第五届 OceanBase 数据库大赛</span></li>
+          <li><strong>C/C++ 组国赛三等奖</strong><span>第十五届蓝桥杯全国软件和信息技术专业人才大赛</span></li>
+          <li><strong>本科组银奖</strong><span>第七届 MaTi Cup 编程竞赛</span></li>
+          <li><strong>荣誉提名</strong><span>2024 数学建模国际赛（MCM/ICM）</span></li>
+          <li><strong>省赛二等奖</strong><span>2024 全国大学生数学建模竞赛</span></li>
+          <li><strong>多次一等奖学金</strong><span>北京理工大学</span></li>
+        </ul>
+      </section>
     </div>
-  </section>
+  </div>
 </main>
