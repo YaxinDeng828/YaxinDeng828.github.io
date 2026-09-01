@@ -27,7 +27,7 @@
     }
   }
 
-  document.addEventListener("DOMContentLoaded", function () {
+  function initializeLanguageToggle() {
     updateLanguage(language);
 
     var toggle = document.querySelector("#language-toggle .language-toggle");
@@ -37,5 +37,11 @@
         updateLanguage(language === "zh" ? "en" : "zh");
       });
     }
-  });
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initializeLanguageToggle);
+  } else {
+    initializeLanguageToggle();
+  }
 }());
