@@ -243,6 +243,18 @@ html[data-language="zh"] .language-text--zh {
   display: block;
 }
 
+.interest-title.language-text--zh,
+.interest-description.language-text--zh,
+html[data-language="zh"] .interest-title.language-text--en,
+html[data-language="zh"] .interest-description.language-text--en {
+  display: none;
+}
+
+html[data-language="zh"] .interest-title.language-text--zh,
+html[data-language="zh"] .interest-description.language-text--zh {
+  display: block;
+}
+
 .interest-title {
   font-weight: 700;
 }

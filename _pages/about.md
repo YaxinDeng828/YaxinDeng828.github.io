@@ -12,7 +12,7 @@ author_profile: false
         <img src="/images/deng-yaxin.jpg" alt="Photo of Deng Yaxin" data-alt-en="Photo of Deng Yaxin" data-alt-zh="邓雅馨的照片">
       </figure>
       <h1 id="sidebar-name">
-        <span class="language-text language-text--en">Deng Yaxin</span>
+        <span class="language-text language-text--en">Yaxin Deng</span>
         <span class="language-text language-text--zh" lang="zh-CN">邓雅馨</span>
       </h1>
       <p>
@@ -78,20 +78,19 @@ author_profile: false
             <span class="language-text language-text--zh" lang="zh-CN">MemDTG：面向证据可采纳智能体记忆的动态时序记忆图</span>
           </h3>
           <p class="paper-authors">
-            <span class="language-text language-text--en">Yaxin Deng, Hongchao Qin, Tianyi Gao, Guang Zeng, and Rong-Hua Li</span>
-            <span class="language-text language-text--zh" lang="zh-CN">邓雅馨、秦洪超、高天翼、曾广、李荣华</span>
+            <span class="language-text language-text--en"><strong>Yaxin Deng</strong>, Hongchao Qin, Tianyi Gao, Guang Zeng, and Rong-Hua Li</span>
+            <span class="language-text language-text--zh" lang="zh-CN"><strong>邓雅馨</strong>、秦洪超、高天翼、曾广、李荣华</span>
           </p>
           <p class="paper-meta">
-            <span class="language-text language-text--en">CIKM 2026 · First Author</span>
-            <span class="language-text language-text--zh" lang="zh-CN">CIKM 2026 · 第一作者</span>
+            <span class="language-text language-text--en">The 35th ACM International Conference on Information and Knowledge Management (CIKM '26) · CCF-B</span>
+            <span class="language-text language-text--zh" lang="zh-CN">第 35 届 ACM 国际知识管理与信息管理会议（CIKM '26）· CCF-B</span>
           </p>
           <div id="memdtg-abstract" class="paper-abstract">
             <p class="paper-abstract__label">
               <span class="language-text language-text--en">Abstract</span>
               <span class="language-text language-text--zh" lang="zh-CN">摘要</span>
             </p>
-            <p>Long-term agent memory is an online, non-monotonic retrieval problem. New interactions may reinforce, contradict, supersede, specialize, abstract, or expire earlier memories; the same fact can be a wrong current answer, a correct historical answer, or necessary transition evidence depending on query intent. Existing chunk, summary, and graph memories retrieve by semantic or graph relevance and treat time as post-hoc metadata, so they cannot determine whether a memory is observable, valid, lifecycle-admissible, and provenance-supported before it enters the candidate space.</p>
-            <p>We propose MemDTG, a dynamic temporal memory graph that frames agent memory as temporal evidence admission. MemDTG separates immutable raw episodes from a mutable entity-state temporal graph and a memory-evolution graph over assertion versions. State slots localize mutable user and task states; an LLM-assisted slot-local resolver classifies semantic evolution only within bounded temporal histories; and deterministic commit rules update valid intervals, lifecycle states, and typed evolution edges. At read time, a query compiler instantiates observed-time, valid-time, version, edge-type, and role constraints before ranking, and QV-CTW retrieves evidence paths only inside the query-legal temporal subgraph. Evidence certificates record selected facts, sources, roles, and rejected stale or future alternatives, making retrieval auditable. On LongMemEval and LoCoMo, MemDTG achieves the best LLM-judge accuracy and Citation F1. Ablation and temporal error analyses confirm that provenance certificates and legal-subgraph pre-filtering are each essential for these gains, reducing stale-answer errors by 61.7% and future leaks by 80.1%.</p>
+            <p>Long-term agent memory is an online, non-monotonic retrieval problem: new interactions can reinforce, contradict, supersede, or expire earlier memories. MemDTG treats memory as temporal evidence admission, combining immutable episodes, a mutable entity-state graph, and a memory-evolution graph over assertion versions. It compiles query constraints before ranking and uses QV-CTW to retrieve only evidence paths inside the legal temporal subgraph, while evidence certificates record selected facts, sources, roles, and rejected alternatives. On LongMemEval and LoCoMo, MemDTG achieves the best LLM-judge accuracy and Citation F1, reducing stale-answer errors by 61.7% and future leaks by 80.1%.</p>
           </div>
         </article>
       </section>
