@@ -220,12 +220,22 @@
 }
 
 .award-list li {
-  padding: 0.85rem 0;
-  border-bottom: 1px solid #e5e5e5;
+  position: relative;
+  padding: 0.2rem 0 0.2rem 1.35rem;
 }
 
 .award-list li:first-child {
   padding-top: 0;
+}
+
+.award-list li::before {
+  position: absolute;
+  top: 0.95em;
+  left: 0.15rem;
+  width: 0.42rem;
+  height: 0.42rem;
+  background: var(--global-text-color);
+  content: "";
 }
 
 .award-list strong {
@@ -234,12 +244,7 @@
 
 .award-list span {
   color: var(--global-text-color-light);
-  font-size: 0.9rem;
-}
-
-.award-list span::after {
-  content: " · ";
-  white-space: pre;
+  font-size: 0.95rem;
 }
 
 @include breakpoint(max-width $medium) {
@@ -336,7 +341,9 @@
   }
 
   .award-list li {
-    line-height: 1.75;
+    padding-top: 0.15rem;
+    padding-bottom: 0.15rem;
+    line-height: 1.7;
   }
 }
 

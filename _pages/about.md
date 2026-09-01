@@ -37,28 +37,23 @@ author_profile: false
 
       <section id="papers" class="home-section" aria-labelledby="papers-title">
         <h2 id="papers-title">Paper</h2>
-        <div class="paper-groups">
-          <div class="paper-group">
-            <h3 class="paper-group__title">已投稿</h3>
-            <article class="paper-entry">
-              <h4><a href="/publication/2026-01-01-memdtg">MemDTG: Dynamic Temporal Memory Graphs for Evidence-Admissible Agent Memory</a></h4>
-              <p>Deng Yaxin · First Author · CIKM 2026</p>
-            </article>
-          </div>
-        </div>
+        <article class="paper-entry">
+          <h4><a href="/publication/2026-01-01-memdtg">MemDTG: Dynamic Temporal Memory Graphs for Evidence-Admissible Agent Memory</a></h4>
+          <p>Deng Yaxin · First Author · CIKM 2026</p>
+        </article>
       </section>
 
       <section id="awards" class="home-section" aria-labelledby="awards-title">
         <h2 id="awards-title">Awards</h2>
         <ul class="award-list">
-          <li><span>2026 年“挑战杯”首都大学生创业计划竞赛</span><strong>北京赛区一等奖</strong></li>
-          <li><span>2025 年中国高校计算机大赛-团体程序设计天梯赛</span><strong>个人决赛三等奖</strong></li>
-          <li><span>全国大学生计算机系统能力大赛暨第五届 OceanBase 数据库大赛</span><strong>北京赛区第一名</strong></li>
-          <li><span>第十五届蓝桥杯全国软件和信息技术专业人才大赛</span><strong>C/C++ 组国赛三等奖</strong></li>
-          <li><span>第七届码蹄杯全国大学生程序设计大赛</span><strong>本科组银奖</strong></li>
-          <li><span>2024 年美国大学生数学建模竞赛</span><strong>荣誉提名</strong></li>
-          <li><span>2024 年全国大学生数学建模竞赛</span><strong>省赛二等奖</strong></li>
-          <li><span>北京理工大学</span><strong>多次一等奖学金</strong></li>
+          <li><span>2026 年“挑战杯”首都大学生创业计划竞赛</span> · <strong>北京赛区一等奖</strong></li>
+          <li><span>2025 年中国高校计算机大赛-团体程序设计天梯赛</span> · <strong>个人决赛三等奖</strong></li>
+          <li><span>全国大学生计算机系统能力大赛暨第五届 OceanBase 数据库大赛</span> · <strong>北京赛区第一名</strong></li>
+          <li><span>第十五届蓝桥杯全国软件和信息技术专业人才大赛</span> · <strong>C/C++ 组国赛三等奖</strong></li>
+          <li><span>第七届码蹄杯全国大学生程序设计大赛</span> · <strong>本科组银奖</strong></li>
+          <li><span>2024 年全国大学生数学建模竞赛</span> · <strong>省赛二等奖</strong></li>
+          <li><span>2024: The Mathematical Contest in Modeling (MCM) / The Interdisciplinary Contest in Modeling (ICM)</span> · <strong>Honorable Mention</strong></li>
+          <li><span>Beijing Institute of Technology</span> · <strong>First-Class Scholarship</strong></li>
         </ul>
       </section>
     </div>
