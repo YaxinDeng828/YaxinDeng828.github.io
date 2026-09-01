@@ -1,39 +1,91 @@
 ---
 permalink: /
-title: "About"
-author_profile: true
+layout: home
+title: "Deng Yaxin"
+author_profile: false
 ---
 
-Hello, I am Deng Yaxin, a Computer Science and Technology undergraduate at Beijing Institute of Technology, expected to graduate in 2027.
+<main class="home-shell">
+  <section id="profile" class="home-profile" aria-labelledby="profile-title">
+    <div class="home-profile__copy">
+      <p class="home-profile__eyebrow">Computer Science · Beijing, China</p>
+      <h1 id="profile-title">Deng Yaxin</h1>
+      <p class="home-profile__lead">Computer Science and Technology undergraduate at Beijing Institute of Technology, expected to graduate in 2027.</p>
+      <p class="home-profile__summary">I study how agent systems can work more reliably in uncertain, long-context, and low-feedback environments. My work focuses on long-term memory, retrieval-augmented generation, data reasoning, and database systems.</p>
+      <div class="home-profile__links" aria-label="Profile links">
+        <a href="mailto:yaxindeng0828@gmail.com">Email</a>
+        <a href="https://github.com/YaxinDeng828">GitHub</a>
+      </div>
+    </div>
+    <figure class="home-profile__portrait">
+      <img src="/images/avatar.jpg" alt="Portrait of Deng Yaxin">
+    </figure>
+  </section>
 
-I study how **agent systems** can work more reliably in uncertain, long-context, and low-feedback environments: knowing where evidence comes from, whether information is still valid, and how to re-plan when something goes wrong. My work focuses on long-term memory, retrieval-augmented generation, data reasoning, and database systems.
+  <section id="papers" class="home-section" aria-labelledby="papers-title">
+    <header class="home-section__header">
+      <p class="home-section__index">01</p>
+      <div>
+        <h2 id="papers-title">Papers</h2>
+        <p>Published, submitted, and working papers.</p>
+      </div>
+    </header>
 
-## Research interests
+    <article class="paper-entry">
+      <div class="paper-entry__meta">
+        <span>2026</span>
+        <span>CIKM 2026</span>
+      </div>
+      <div class="paper-entry__body">
+        <h3><a href="/publication/2026-01-01-memdtg">MemDTG: Dynamic Temporal Memory Graphs for Evidence-Admissible Agent Memory</a></h3>
+        <p class="paper-entry__authors"><strong>Deng Yaxin</strong> · First Author</p>
+        <p>Dynamic temporal memory graphs and evidence admission for time-aware, traceable, and auditable agent memory.</p>
+      </div>
+    </article>
+  </section>
 
-- **Agent memory**: dynamic temporal memory graphs, evidence admission, and auditable retrieval
-- **Retrieval-augmented generation**: financial documents, multimodal information, hybrid retrieval, and context reranking
-- **Data intelligence**: heterogeneous data understanding, deterministic computation, closed-loop correction, and budget-aware decision making
-- **Systems**: database execution, inverted indexes, vector retrieval, and observable agent engineering
+  <section id="awards" class="home-section" aria-labelledby="awards-title">
+    <header class="home-section__header">
+      <p class="home-section__index">02</p>
+      <div>
+        <h2 id="awards-title">Awards</h2>
+        <p>Selected competition honors and academic awards.</p>
+      </div>
+    </header>
 
-## Education
-
-**Beijing Institute of Technology** - B.Eng. in Computer Science and Technology  
-September 2023 - July 2027 - GPA: 3.5 / 4.0
-
-Selected coursework: C++ Programming (98), Data Structures and Algorithm Design (95), Object-Oriented Technology and Methodology (95), Computer Networks (92). CET-4: 615; CET-6: 586.
-
-## Recent research
-
-### MemDTG: Dynamic Temporal Memory Graphs for Evidence-Admissible Agent Memory
-
-**CIKM 2026 - First author**
-
-MemDTG represents long-term agent memory as a temporal network with time, provenance, and evolution relationships. It introduces temporal evidence admission and auditable retrieval mechanisms that filter stale, future, or question-irrelevant evidence before ranking, while tracing the source of each answer. On LongMemEval and LoCoMo, MemDTG achieved LLM evaluation accuracy of 79.96% / 69.78% and Top-5 evidence recall of 78.68% / 54.01%.
-
-## Projects and outcomes
-
-I turn ideas from experimental decision making, long-document retrieval, data analysis, and database optimization into systems that can be observed, evaluated, and reused. See [Projects](/portfolio/) for selected work and [Research](/publications/) for publications.
-
-## Contact
-
-If you are working on agent memory, reliable retrieval, data intelligence, or database systems, reach me at [yaxindeng0828@gmail.com](mailto:yaxindeng0828@gmail.com).
+    <div class="award-list">
+      <article class="award-entry">
+        <h3>First Prize, Beijing Municipal Round</h3>
+        <p>2026 Challenge Cup</p>
+      </article>
+      <article class="award-entry">
+        <h3>Third Prize, Individual Finals</h3>
+        <p>2025 China Collegiate Computing Contest · Ladder Tournament</p>
+      </article>
+      <article class="award-entry">
+        <h3>First Place in Beijing</h3>
+        <p>5th OceanBase Database Competition</p>
+      </article>
+      <article class="award-entry">
+        <h3>Third Prize, C/C++ Division</h3>
+        <p>15th Blue Bridge Cup National Software and Information Technology Competition</p>
+      </article>
+      <article class="award-entry">
+        <h3>Silver Award, Undergraduate Track</h3>
+        <p>7th MaTi Cup Programming Competition</p>
+      </article>
+      <article class="award-entry">
+        <h3>Honorable Mention</h3>
+        <p>2024 Mathematical Contest in Modeling / Interdisciplinary Contest in Modeling</p>
+      </article>
+      <article class="award-entry">
+        <h3>Second Prize, Provincial Division</h3>
+        <p>2024 National Undergraduate Mathematical Contest in Modeling</p>
+      </article>
+      <article class="award-entry">
+        <h3>Multiple First-Class Scholarships</h3>
+        <p>Beijing Institute of Technology</p>
+      </article>
+    </div>
+  </section>
+</main>
