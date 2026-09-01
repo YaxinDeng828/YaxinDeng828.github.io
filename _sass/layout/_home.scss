@@ -20,7 +20,7 @@
 
 .home-profile {
   display: grid;
-  grid-template-columns: minmax(0, 720px) 144px;
+  grid-template-columns: minmax(0, 720px) 180px;
   align-items: center;
   justify-content: space-between;
   gap: 4rem;
@@ -81,19 +81,17 @@
 }
 
 .home-profile__portrait {
-  width: 144px;
-  aspect-ratio: 1;
+  width: 180px;
   margin: 0;
 }
 
 .home-profile__portrait img {
+  display: block;
   width: 100%;
-  height: 100%;
+  height: auto;
   margin: 0;
-  object-fit: cover;
   border: 1px solid var(--global-border-color);
   border-radius: 4px;
-  filter: grayscale(100%);
 }
 
 .home-section {

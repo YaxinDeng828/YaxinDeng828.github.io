@@ -18,7 +18,7 @@ author_profile: false
       </div>
     </div>
     <figure class="home-profile__portrait">
-      <img src="/images/avatar.jpg" alt="Portrait of Deng Yaxin">
+      <img src="/images/deng-yaxin.jpg" alt="Portrait of Deng Yaxin">
     </figure>
   </section>
 
