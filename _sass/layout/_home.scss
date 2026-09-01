@@ -253,6 +253,52 @@ html[data-language="zh"] .language-text--zh {
   font-size: 0.9rem;
 }
 
+.paper-content {
+  min-width: 0;
+}
+
+.paper-back-link {
+  display: inline-flex;
+  gap: 0.45rem;
+  align-items: center;
+  margin: 0 0 1.5rem;
+  color: var(--global-text-color-light) !important;
+  font-size: 0.9rem;
+}
+
+.paper-content .home-section {
+  padding-bottom: 2rem;
+}
+
+.paper-content .home-section h2 {
+  max-width: 820px;
+  margin-bottom: 0.8rem;
+  font-size: 2rem;
+}
+
+.paper-meta {
+  margin: 0 0 2rem;
+  color: var(--global-text-color-light);
+  font-size: 0.95rem;
+}
+
+.paper-body {
+  max-width: 780px;
+}
+
+.paper-body h3 {
+  margin: 2rem 0 0.75rem;
+  color: var(--global-text-color);
+  font-family: inherit;
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.paper-body p {
+  margin: 0 0 1.25rem;
+}
+
 .award-list {
   margin: 0;
   padding: 0;
@@ -299,6 +345,10 @@ html[data-language="zh"] .language-text--zh {
 
   .home-section h2 {
     font-size: 1.9rem;
+  }
+
+  .paper-content .home-section h2 {
+    font-size: 1.75rem;
   }
 }
 
@@ -378,6 +428,10 @@ html[data-language="zh"] .language-text--zh {
 
   .home-section h2 {
     font-size: 1.75rem;
+  }
+
+  .paper-content .home-section h2 {
+    font-size: 1.55rem;
   }
 
   .home-copy p {

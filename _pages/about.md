@@ -58,7 +58,7 @@ author_profile: false
           <span class="language-text language-text--zh" lang="zh-CN">论文</span>
         </h2>
         <article class="paper-entry">
-          <h4><a href="/publication/2026-01-01-memdtg">
+          <h4><a href="{{ site.baseurl }}/publication/2026-01-01-memdtg">
             <span class="language-text language-text--en">MemDTG: Dynamic Temporal Memory Graphs for Evidence-Admissible Agent Memory</span>
             <span class="language-text language-text--zh" lang="zh-CN">MemDTG：面向证据可采纳智能体记忆的动态时序记忆图</span>
           </a></h4>

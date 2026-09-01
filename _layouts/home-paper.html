@@ -1,0 +1,57 @@
+---
+layout: compress
+---
+
+{% include base_path %}
+
+<!doctype html>
+<html lang="{{ site.locale | slice: 0,2 }}" class="no-js"{% if site.site_theme == "dark" %} data-theme="dark"{% endif %}>
+  <head>
+    {% include head.html %}
+    {% include head/custom.html %}
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lxgw-wenkai-webfont/1.7.0/style.css">
+    <script src="{{ base_path }}/assets/js/language.js"></script>
+  </head>
+
+  <body class="home-page paper-page">
+    {% include browser-upgrade.html %}
+    {% include masthead.html %}
+
+    <main class="home-shell">
+      <div class="home-layout">
+        <aside class="home-sidebar" aria-labelledby="sidebar-name">
+          <figure class="home-sidebar__portrait">
+            <img src="{{ base_path }}/images/deng-yaxin.jpg" alt="Photo of Deng Yaxin" data-alt-en="Photo of Deng Yaxin" data-alt-zh="邓雅馨的照片">
+          </figure>
+          <h1 id="sidebar-name">
+            <span class="language-text language-text--en">Deng Yaxin</span>
+            <span class="language-text language-text--zh" lang="zh-CN">邓雅馨</span>
+          </h1>
+          <p>
+            <span class="language-text language-text--en">Beijing Institute of Technology<br>Computer Science</span>
+            <span class="language-text language-text--zh" lang="zh-CN">北京理工大学<br>计算机科学</span>
+          </p>
+          <a href="mailto:yaxindeng0828@gmail.com">yaxindeng0828@gmail.com</a>
+        </aside>
+
+        <article class="home-content paper-content">
+          <a class="paper-back-link" href="{{ base_path }}/#papers">
+            <span aria-hidden="true">&larr;</span>
+            <span class="language-text language-text--en">Back to papers</span>
+            <span class="language-text language-text--zh" lang="zh-CN">返回论文</span>
+          </a>
+          <section class="home-section" aria-labelledby="paper-title">
+            <h2 id="paper-title">{{ page.title }}</h2>
+            <p class="paper-meta">{{ page.venue }} · {{ page.date | date: "%Y" }}</p>
+            <div class="paper-body">
+              {{ content }}
+            </div>
+          </section>
+        </article>
+      </div>
+    </main>
+
+    {% include scripts.html %}
+  </body>
+</html>
