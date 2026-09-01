@@ -12,7 +12,7 @@ author_profile: false
         <img src="/images/deng-yaxin.jpg" alt="邓雅馨的照片">
       </figure>
       <h1 id="sidebar-name">Deng Yaxin</h1>
-      <p>北京理工大学<br>计算机科学与技术</p>
+      <p>Beijing Institute of Technology<br>Computer Science</p>
       <a href="mailto:yaxindeng0828@gmail.com">yaxindeng0828@gmail.com</a>
     </aside>
 

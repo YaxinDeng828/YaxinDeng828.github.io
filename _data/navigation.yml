@@ -10,12 +10,3 @@
 main:
   - title: "About Me"
     url: /#about
-
-  - title: "Research Interest"
-    url: /#research
-
-  - title: "Paper"
-    url: /#papers
-
-  - title: "Awards"
-    url: /#awards
