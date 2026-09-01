@@ -19,12 +19,9 @@
       image.setAttribute("alt", language === "zh" ? image.dataset.altZh : image.dataset.altEn);
     });
 
-    var toggle = document.querySelector("#language-toggle .language-toggle");
-    if (toggle) {
-      toggle.setAttribute("aria-label", language === "zh" ? "Switch to English" : "切换为中文");
-      toggle.setAttribute("aria-pressed", language === "zh" ? "true" : "false");
-      toggle.querySelector(".language-toggle__label").textContent = language === "zh" ? "English" : "中文";
-    }
+    document.querySelectorAll("#language-toggle [data-language-option]").forEach(function (option) {
+      option.setAttribute("aria-pressed", option.dataset.languageOption === language ? "true" : "false");
+    });
   }
 
   function initializeLanguageToggle() {
@@ -32,10 +29,10 @@
   }
 
   document.addEventListener("click", function (event) {
-    var toggle = event.target.closest("#language-toggle .language-toggle");
-    if (toggle) {
+    var option = event.target.closest("#language-toggle [data-language-option]");
+    if (option) {
       event.preventDefault();
-      updateLanguage(language === "zh" ? "en" : "zh");
+      updateLanguage(option.dataset.languageOption);
     }
   });
 

@@ -80,27 +80,43 @@ html[data-language="zh"] .language-text--zh {
   position: absolute;
   top: 50%;
   right: 1.5rem;
+  z-index: 30;
+  display: flex;
+  gap: 0.45rem;
+  align-items: center;
   transform: translateY(-50%);
+  color: var(--global-text-color-light);
+  font-size: 0.9rem;
 }
 
-.home-page .language-toggle {
-  display: block;
+.home-page .language-option {
   margin: 0;
   padding: 0.25rem 0;
-  color: var(--global-text-color);
+  border: 0;
+  background: transparent;
+  color: var(--global-text-color-light);
   font-family: inherit;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   font-weight: 400;
   cursor: pointer;
 }
 
-.home-page .language-toggle:hover {
-  color: var(--global-link-color-hover);
+.home-page .language-option:hover,
+.home-page .language-option[aria-pressed="true"] {
+  color: var(--global-text-color);
 }
 
-.home-page .language-toggle:focus {
+.home-page .language-option[aria-pressed="true"] {
+  border-bottom: 1px solid var(--global-text-color);
+}
+
+.home-page .language-option:focus {
   outline: 0;
   border-bottom: 1px solid var(--global-text-color);
+}
+
+.home-page .language-option:hover {
+  color: var(--global-link-color-hover);
 }
 
 .home-shell {
