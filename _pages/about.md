@@ -51,14 +51,14 @@ author_profile: false
       <section id="awards" class="home-section" aria-labelledby="awards-title">
         <h2 id="awards-title">Awards</h2>
         <ul class="award-list">
-          <li><strong>北京赛区一等奖</strong><span>2026 年“挑战杯”</span></li>
-          <li><strong>个人决赛三等奖</strong><span>2025 中国大学生计算机设计大赛 · 朗新杯</span></li>
-          <li><strong>北京赛区第一名</strong><span>第五届 OceanBase 数据库大赛</span></li>
-          <li><strong>C/C++ 组国赛三等奖</strong><span>第十五届蓝桥杯全国软件和信息技术专业人才大赛</span></li>
-          <li><strong>本科组银奖</strong><span>第七届 MaTi Cup 编程竞赛</span></li>
-          <li><strong>荣誉提名</strong><span>2024 数学建模国际赛（MCM/ICM）</span></li>
-          <li><strong>省赛二等奖</strong><span>2024 全国大学生数学建模竞赛</span></li>
-          <li><strong>多次一等奖学金</strong><span>北京理工大学</span></li>
+          <li><span>2026 年“挑战杯”首都大学生创业计划竞赛</span><strong>北京赛区一等奖</strong></li>
+          <li><span>2025 年中国高校计算机大赛-团体程序设计天梯赛</span><strong>个人决赛三等奖</strong></li>
+          <li><span>全国大学生计算机系统能力大赛暨第五届 OceanBase 数据库大赛</span><strong>北京赛区第一名</strong></li>
+          <li><span>第十五届蓝桥杯全国软件和信息技术专业人才大赛</span><strong>C/C++ 组国赛三等奖</strong></li>
+          <li><span>第七届码蹄杯全国大学生程序设计大赛</span><strong>本科组银奖</strong></li>
+          <li><span>2024 年美国大学生数学建模竞赛</span><strong>荣誉提名</strong></li>
+          <li><span>2024 年全国大学生数学建模竞赛</span><strong>省赛二等奖</strong></li>
+          <li><span>北京理工大学</span><strong>多次一等奖学金</strong></li>
         </ul>
       </section>
     </div>

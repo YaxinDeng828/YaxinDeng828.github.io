@@ -220,9 +220,6 @@
 }
 
 .award-list li {
-  display: grid;
-  grid-template-columns: minmax(180px, 0.8fr) minmax(0, 1.2fr);
-  gap: 2rem;
   padding: 0.85rem 0;
   border-bottom: 1px solid #e5e5e5;
 }
@@ -232,12 +229,17 @@
 }
 
 .award-list strong {
-  font-weight: 400;
+  font-weight: 700;
 }
 
 .award-list span {
   color: var(--global-text-color-light);
   font-size: 0.9rem;
+}
+
+.award-list span::after {
+  content: " · ";
+  white-space: pre;
 }
 
 @include breakpoint(max-width $medium) {
@@ -334,16 +336,7 @@
   }
 
   .award-list li {
-    display: block;
-  }
-
-  .award-list strong,
-  .award-list span {
-    display: block;
-  }
-
-  .award-list span {
-    margin-top: 0.2rem;
+    line-height: 1.75;
   }
 }
 
