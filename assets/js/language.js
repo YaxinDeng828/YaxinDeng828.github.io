@@ -29,15 +29,15 @@
 
   function initializeLanguageToggle() {
     updateLanguage(language);
-
-    var toggle = document.querySelector("#language-toggle .language-toggle");
-    if (toggle) {
-      toggle.addEventListener("click", function (event) {
-        event.preventDefault();
-        updateLanguage(language === "zh" ? "en" : "zh");
-      });
-    }
   }
+
+  document.addEventListener("click", function (event) {
+    var toggle = event.target.closest("#language-toggle .language-toggle");
+    if (toggle) {
+      event.preventDefault();
+      updateLanguage(language === "zh" ? "en" : "zh");
+    }
+  });
 
   if (document.readyState === "loading") {
     document.addEventListener("DOMContentLoaded", initializeLanguageToggle);
