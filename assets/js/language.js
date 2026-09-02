@@ -13,7 +13,7 @@
     localStorage.setItem(storageKey, language);
     document.documentElement.setAttribute("data-language", language);
     document.documentElement.setAttribute("lang", language === "zh" ? "zh-CN" : "en");
-    document.title = language === "zh" ? "邓雅馨" : "Deng Yaxin";
+    document.title = language === "zh" ? "邓雅馨" : "Yaxin Deng";
 
     document.querySelectorAll("[data-alt-en]").forEach(function (image) {
       image.setAttribute("alt", language === "zh" ? image.dataset.altZh : image.dataset.altEn);
