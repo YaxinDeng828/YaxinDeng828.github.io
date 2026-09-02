@@ -1,5 +1,5 @@
 # Base image: Ruby with necessary dependencies for Jekyll
-FROM ruby:3.2
+FROM m.daocloud.io/docker.io/library/ruby:3.2
 
 # Install dependencies
 RUN apt-get update && apt-get install -y \
@@ -27,6 +27,7 @@ COPY Gemfile ./
 
 
 # Install bundler and dependencies
+RUN gem sources --remove https://rubygems.org/ --add https://mirrors.tuna.tsinghua.edu.cn/rubygems/
 RUN gem install connection_pool:2.5.0
 RUN gem install bundler:2.3.26
 RUN bundle install

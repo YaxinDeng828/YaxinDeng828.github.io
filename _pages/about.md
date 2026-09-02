@@ -8,9 +8,6 @@ author_profile: false
 <main class="home-shell">
   <div class="home-layout">
     <aside class="home-sidebar" aria-labelledby="sidebar-name">
-      <figure class="home-sidebar__portrait">
-        <img src="/images/deng-yaxin.jpg" alt="Photo of Deng Yaxin" data-alt-en="Photo of Deng Yaxin" data-alt-zh="邓雅馨的照片">
-      </figure>
       <h1 id="sidebar-name">
         <span class="language-text language-text--en">Yaxin Deng</span>
         <span class="language-text language-text--zh" lang="zh-CN">邓雅馨</span>

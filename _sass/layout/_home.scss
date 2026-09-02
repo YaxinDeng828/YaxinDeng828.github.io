@@ -174,20 +174,6 @@ html[data-language="zh"] .language-text--zh {
   line-height: 1.55;
 }
 
-.home-sidebar__portrait {
-  width: 170px;
-  margin: 0 0 1.25rem;
-}
-
-.home-sidebar__portrait img {
-  display: block;
-  width: 100%;
-  height: auto;
-  margin: 0;
-  border: 1px solid var(--global-border-color);
-  border-radius: 2px;
-}
-
 .home-sidebar h1 {
   margin: 0 0 0.7rem;
   color: var(--global-text-color);
@@ -482,10 +468,6 @@ html[data-language="zh"] .interest-description.language-text--zh {
     gap: 3rem;
   }
 
-  .home-sidebar__portrait {
-    width: 132px;
-  }
-
   .home-section h2 {
     font-size: 1.9rem;
   }
@@ -534,31 +516,9 @@ html[data-language="zh"] .interest-description.language-text--zh {
   }
 
   .home-sidebar {
-    display: grid;
-    grid-template-columns: 96px minmax(0, 1fr);
-    column-gap: 1.25rem;
+    display: block;
     margin-bottom: 3.5rem;
     position: static;
-  }
-
-  .home-sidebar__portrait {
-    grid-row: span 3;
-    width: 96px;
-    margin: 0;
-  }
-
-  .home-sidebar h1 {
-    align-self: end;
-    margin: 0;
-  }
-
-  .home-sidebar p {
-    align-self: center;
-    margin: 0;
-  }
-
-  .home-sidebar a {
-    align-self: start;
   }
 
   .home-section {
