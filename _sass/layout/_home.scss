@@ -541,6 +541,10 @@ html[data-language="zh"] .interest-description.language-text--zh {
     position: static;
   }
 
+  .home-sidebar--no-photo {
+    display: block;
+  }
+
   .home-sidebar__portrait {
     grid-row: span 3;
     width: 96px;
