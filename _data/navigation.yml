@@ -11,6 +11,3 @@ main:
   - title: "About Me"
     title_zh: "关于我"
     url: /#about
-  - title: "Reading"
-    title_zh: "读书"
-    url: /books/
