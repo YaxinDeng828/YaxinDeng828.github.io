@@ -11,8 +11,9 @@ layout: compress
     {% include head/custom.html %}
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lxgw-wenkai-webfont/1.7.0/style.css">
-    <script src="{{ base_path }}/assets/js/language.js"></script>
-    <script src="{{ base_path }}/assets/js/cat-click.js" data-paw-icon="{{ base_path }}/images/paw-click.png"></script>
+    {% if page.url == '/' or page.url == '/index.html' %}
+      <script src="{{ base_path }}/assets/js/language.js"></script>
+    {% endif %}
   </head>
 
   <body class="home-page">

@@ -1,0 +1,94 @@
+---
+layout: compress
+---
+
+{% include base_path %}
+{% assign chapter_notes = site.notes | where: "book_id", page.book_id | sort: "chapter_number" %}
+
+<!doctype html>
+<html lang="{{ site.locale | slice: 0,2 }}" class="no-js"{% if site.site_theme == "dark" %} data-theme="dark"{% endif %}>
+  <head>
+    {% include head.html %}
+    {% include head/custom.html %}
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lxgw-wenkai-webfont/1.7.0/style.css">
+  </head>
+
+  <body class="home-page notes-page book-page">
+    {% include browser-upgrade.html %}
+    {% include masthead.html %}
+
+    <main class="home-shell">
+      <div class="home-layout">
+        <aside class="home-sidebar" aria-labelledby="book-sidebar-name">
+          <h1 id="book-sidebar-name">
+            邓雅馨
+          </h1>
+          <p>
+            个人笔记<br>阅读与思考
+          </p>
+          <a href="{{ base_path }}/books/">
+            全部书籍
+          </a>
+        </aside>
+
+        <article class="home-content notes-content">
+          <a class="notes-back-link" href="{{ base_path }}/books/">
+            <span aria-hidden="true">&larr; </span>
+            全部书籍
+          </a>
+
+          <section class="home-section book-section" aria-labelledby="book-title">
+            <p class="notes-eyebrow">
+              读书笔记
+            </p>
+            <h2 id="book-title">
+              {{ page.title_zh | default: page.title }}
+            </h2>
+            {% if page.author %}
+              <p class="book-author">
+                {{ page.author_zh | default: page.author }}
+              </p>
+            {% endif %}
+            {% if page.description %}
+              <p class="notes-intro">
+                {{ page.description_zh | default: page.description }}
+              </p>
+            {% endif %}
+            <p class="notes-item__meta book-summary-meta">
+              已整理 {{ chapter_notes.size }} 章
+              {% if page.status %}
+                <span aria-hidden="true"> · </span>
+                {{ page.status_zh | default: page.status }}
+              {% endif %}
+            </p>
+          </section>
+
+          <section class="home-section chapter-section" aria-labelledby="chapters-title">
+            <h3 id="chapters-title" class="chapter-section__title">
+              章节
+            </h3>
+            <div class="chapter-list">
+              {% for note in chapter_notes %}
+                <article class="chapter-row">
+                  <a class="chapter-row__link" href="{{ note.url | relative_url }}">
+                    <span class="chapter-row__number">{% if note.chapter_number %}{{ note.chapter_number | prepend: "0" | slice: -2, 2 }}{% else %}&mdash;{% endif %}</span>
+                    <span class="chapter-row__main">
+                      <span class="chapter-row__title">{{ note.chapter_title | default: note.title }}</span>
+                      {% if note.summary %}<span class="chapter-row__summary">{{ note.summary }}</span>{% endif %}
+                    </span>
+                    <span class="chapter-row__arrow" aria-hidden="true">&rarr;</span>
+                  </a>
+                </article>
+              {% else %}
+                <p class="notes-empty">章节笔记会显示在这里。</p>
+              {% endfor %}
+            </div>
+          </section>
+        </article>
+      </div>
+    </main>
+
+    {% include scripts.html %}
+  </body>
+</html>

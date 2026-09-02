@@ -1,0 +1,86 @@
+---
+layout: compress
+---
+
+{% include base_path %}
+
+<!doctype html>
+<html lang="{{ site.locale | slice: 0,2 }}" class="no-js"{% if site.site_theme == "dark" %} data-theme="dark"{% endif %}>
+  <head>
+    {% include head.html %}
+    {% include head/custom.html %}
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lxgw-wenkai-webfont/1.7.0/style.css">
+  </head>
+
+  <body class="home-page notes-page books-page">
+    {% include browser-upgrade.html %}
+    {% include masthead.html %}
+
+    <main class="home-shell">
+      <div class="home-layout">
+        <aside class="home-sidebar" aria-labelledby="books-sidebar-name">
+          <h1 id="books-sidebar-name">
+            邓雅馨
+          </h1>
+          <p>
+            个人笔记<br>阅读与思考
+          </p>
+          <a href="{{ base_path }}/notes/">
+            全部笔记
+          </a>
+        </aside>
+
+        <article class="home-content notes-content">
+          <section class="home-section" aria-labelledby="books-title">
+            <p class="notes-eyebrow">
+              阅读
+            </p>
+            <h2 id="books-title">
+              书籍
+            </h2>
+            <p class="notes-intro">
+              把一本书读成一章一章可以回看的思考。
+            </p>
+
+            <div class="book-list">
+              {% assign books = site.books | sort: "date" | reverse %}
+              {% for book in books %}
+                {% assign chapter_notes = site.notes | where: "book_id", book.book_id %}
+                <article class="book-row">
+                  <a class="book-row__link" href="{{ book.url | relative_url }}">
+                    <span class="book-row__main">
+                      <span class="book-row__title">
+                        {{ book.title_zh | default: book.title }}
+                      </span>
+                      {% if book.author %}
+                        <span class="book-row__author">
+                          {{ book.author_zh | default: book.author }}
+                        </span>
+                      {% endif %}
+                    </span>
+                    <span class="book-row__meta">
+                      <span class="book-row__count">
+                        {{ chapter_notes.size }} 章
+                      </span>
+                      {% if book.status %}
+                        <span class="book-row__status">
+                          {{ book.status_zh | default: book.status }}
+                        </span>
+                      {% endif %}
+                    </span>
+                    <span class="book-row__arrow" aria-hidden="true">&rarr;</span>
+                  </a>
+                </article>
+              {% else %}
+                <p class="notes-empty">还没有书籍。</p>
+              {% endfor %}
+            </div>
+          </section>
+        </article>
+      </div>
+    </main>
+
+    {% include scripts.html %}
+  </body>
+</html>

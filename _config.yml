@@ -231,6 +231,9 @@ collections:
   notes:
     output: true
     permalink: /notes/:path/
+  books:
+    output: true
+    permalink: /books/:path/
 
 
 # Sass/SCSS

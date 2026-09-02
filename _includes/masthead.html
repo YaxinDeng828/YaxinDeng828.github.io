@@ -1,14 +1,14 @@
 {% include base_path %}
+{% assign is_about_page = false %}
+{% if page.url == '/' or page.url == '/index.html' %}
+  {% assign is_about_page = true %}
+{% endif %}
 <div class="masthead">
   <div class="masthead__inner-wrap">
     <div class="masthead__menu">
       <nav id="site-nav" class="greedy-nav">
         <button><span class="navicon"></span></button>
         <ul class="visible-links">
-          {% assign is_home_page = false %}
-          {% if page.url == '/' or page.url == '/index.html' %}
-            {% assign is_home_page = true %}
-          {% endif %}
           {% for link in site.data.navigation.main %}
             {% if link.url contains 'http' %}
               {% assign domain = '' %}
@@ -17,8 +17,12 @@
             {% endif %}
             <li class="masthead__menu-item {% if is_home_page and link.url == '/#about' %}selected{% elsif page.url contains link.url and link.url != '/' %}selected{% endif %}">
               <a href="{{ domain }}{{ link.url }}">
-                <span class="language-text language-text--en">{{ link.title }}</span>
-                <span class="language-text language-text--zh" lang="zh-CN">{{ link.title_zh | default: link.title }}</span>
+                {% if is_about_page %}
+                  <span class="language-text language-text--en">{{ link.title }}</span>
+                  <span class="language-text language-text--zh" lang="zh-CN">{{ link.title_zh | default: link.title }}</span>
+                {% else %}
+                  {{ link.title_zh | default: link.title }}
+                {% endif %}
               </a>
             </li>
           {% endfor %}
@@ -29,10 +33,12 @@
         <ul class="hidden-links hidden"></ul>
       </nav>
     </div>
-    <div id="language-toggle" class="language-toggle-wrap" role="group" aria-label="Language">
-      <button type="button" class="language-option" data-language-option="zh" aria-pressed="false">中文</button>
-      <span aria-hidden="true">/</span>
-      <button type="button" class="language-option" data-language-option="en" aria-pressed="false">English</button>
-    </div>
+    {% if is_about_page %}
+      <div id="language-toggle" class="language-toggle-wrap" role="group" aria-label="Language">
+        <button type="button" class="language-option" data-language-option="zh" aria-pressed="false">中文</button>
+        <span aria-hidden="true">/</span>
+        <button type="button" class="language-option" data-language-option="en" aria-pressed="false">English</button>
+      </div>
+    {% endif %}
   </div>
 </div>

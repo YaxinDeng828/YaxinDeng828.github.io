@@ -11,7 +11,6 @@ layout: compress
     {% include head/custom.html %}
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lxgw-wenkai-webfont/1.7.0/style.css">
-    <script src="{{ base_path }}/assets/js/language.js"></script>
   </head>
 
   <body class="home-page notes-page note-page">
@@ -22,24 +21,23 @@ layout: compress
       <div class="home-layout">
         <aside class="home-sidebar" aria-labelledby="note-sidebar-name">
           <h1 id="note-sidebar-name">
-            <span class="language-text language-text--en">Yaxin Deng</span>
-            <span class="language-text language-text--zh" lang="zh-CN">邓雅馨</span>
+            邓雅馨
           </h1>
           <p>
-            <span class="language-text language-text--en">Personal notes<br>Research &amp; ideas</span>
-            <span class="language-text language-text--zh" lang="zh-CN">个人笔记<br>研究与想法</span>
+            个人笔记<br>研究与想法
           </p>
           <a href="{{ base_path }}/notes/">
-            <span class="language-text language-text--en">All notes</span>
-            <span class="language-text language-text--zh" lang="zh-CN">全部笔记</span>
+            全部笔记
+          </a>
+          <a href="{{ base_path }}/books/">
+            读书笔记
           </a>
         </aside>
 
         <article class="home-content notes-content">
           <a class="notes-back-link" href="{{ base_path }}/notes/">
             <span aria-hidden="true">&larr; </span>
-            <span class="language-text language-text--en">All notes</span>
-            <span class="language-text language-text--zh" lang="zh-CN">全部笔记</span>
+            全部笔记
           </a>
           <section class="home-section note-section" aria-labelledby="note-title">
             {% if page.category %}<p class="notes-eyebrow">{{ page.category }}</p>{% endif %}
@@ -47,8 +45,7 @@ layout: compress
             {% if page.summary %}<p class="notes-intro">{{ page.summary }}</p>{% endif %}
             <p class="notes-item__meta">
               {% if page.date %}
-                <span class="language-text language-text--en">Updated </span>
-                <span class="language-text language-text--zh" lang="zh-CN">更新于 </span>
+                更新于
                 {{ page.date | date: "%B %d, %Y" }}
               {% endif %}
               {% if page.tags %}<span aria-hidden="true"> · </span>{{ page.tags | join: " · " }}{% endif %}
