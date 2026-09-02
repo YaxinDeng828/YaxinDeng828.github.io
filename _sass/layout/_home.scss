@@ -23,6 +23,40 @@ html[data-language="zh"] .language-text--zh {
   display: inline;
 }
 
+.cat-click-effect {
+  position: fixed;
+  z-index: 40;
+  width: 3.25rem;
+  height: 3.25rem;
+  pointer-events: none;
+  object-fit: contain;
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0.45) rotate(var(--cat-angle));
+  animation: cat-click-pop 0.7s ease-out forwards;
+}
+
+@keyframes cat-click-pop {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.45) rotate(var(--cat-angle));
+  }
+
+  18% {
+    opacity: 0.9;
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate(-50%, calc(-50% - 1.25rem)) scale(1) rotate(var(--cat-angle));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cat-click-effect {
+    display: none;
+  }
+}
+
 .home-page .masthead {
   position: relative;
   background: #fff;
